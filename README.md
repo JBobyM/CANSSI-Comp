@@ -50,7 +50,7 @@ Ultimately, we obtained two (training) datasets on which we trained the model. T
 
 ### Calculation process for the 'win_probability' column
 
-After training the model, I computed the predicted probabilities for the test dataset. This process generated a table containing the probability for each horse to win the race, meaning to be classified in category 1 of the dependent variable.
+After training the model, I computed the predicted probabilities for the test dataset. This process generated an array containing the probability for each horse to win the race, meaning to be classified in category 1 of the dependent variable.
 
 Initially, the sum of these probabilities per race exceeded 1. To adjust this sum to be equal to 1 per race, I normalized the probabilities using the softmax function. This function calculates the exponential of each probability and then divides this value by the sum of the exponentials of all probabilities per race. These new probabilities are then saved in the 'win_probability' column of the win_probability.parquet [file](https://github.com/JBobyM/CANSSI-Comp/blob/main/win_probability.parquet), representing the column to predict in the competition.
 
