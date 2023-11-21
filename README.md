@@ -56,4 +56,4 @@ Initially, the sum of these probabilities per race exceeded 1. To adjust this su
 
 ### The Model
 
-The model I created is a binary classification model using a neural network. The dependent variable, 'RaceOutcome,' has two modalities: 1 when the horse won the race and 0 otherwise. The explanatory variables encompass all the discussed features. After one-hot encoding categorical variables, the final model comprises 90 explanatory variables and 275,190 observations, with 137,595 for each class of the dependent variable.
+The model I created is a binary classification model using neural network in tensorflow. The dependent variable, 'RaceOutcome,' has two modalities: 1 when the horse won the race and 0 otherwise. The explanatory variables encompass all the discussed features. After one-hot encoding categorical variables, the final model comprises 90 explanatory variables and 275,190 observations, with 137,595 for each class of the dependent variable.
