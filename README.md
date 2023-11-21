@@ -56,7 +56,9 @@ Initially, the sum of these probabilities per race exceeded 1. To adjust this su
 
 ### The Model
 
-The model I created is a binary classification model using neural network in tensorflow. The dependent variable, 'RaceOutcome,' has two modalities: 1 when the horse won the race and 0 otherwise. The explanatory variables encompass all the discussed features. After one-hot encoding categorical variables, the final model comprises 92 explanatory variables and 275,190 observations, with 137,595 for each class of the dependent variable.
+The model I've developed is a binary classification neural network implemented using TensorFlow. It operates on the 'RaceOutcome' variable, where '1' indicates a horse winning the race and '0' denotes otherwise. The explanatory variables encompass all discussed features, including continuous variables that were standardized and categorical variables that underwent one-hot encoding. After standardizing the continuous variables and performing one-hot encoding for categorical ones, the finalized model comprises 92 explanatory variables. The training dataset contains 275,190 observations, evenly distributed with 137,595 instances for each class of the dependent variable.
+
+Initially, the dataset preparation was conducted using R. However, due to technical issues encountered when attempting to download Keras in R, I transitioned to Python to execute the model training and evaluation.
 
 ### Enhancing Horse Race Predictions: Balancing Precision and Sensitivity
 During the model training and hyperparameter tuning, I deliberately opted to prioritize precision over sensitivity for the positive class (1). I specifically chose the model's hyperparameters that minimize false positives—instances where the model wrongly predicts horses as winners when they've actually lost. I made this decision to avoid potential financial losses, such as betting on a horse the model predicted would win but ultimately didn't, or other negative consequences.
